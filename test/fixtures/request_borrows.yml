@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day_borrow: 2019-11-09
+  day_return: 2019-11-09
+  status: 1
+  user: one
+
+two:
+  day_borrow: 2019-11-09
+  day_return: 2019-11-09
+  status: 1
+  user: two

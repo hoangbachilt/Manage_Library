@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  content: MyText
+  quanity: 1
+  status: false
+  rate_average: 1.5
+  picture: MyString
+  author: one
+  publisher: one
+  category: one
+
+two:
+  name: MyString
+  content: MyText
+  quanity: 1
+  status: false
+  rate_average: 1.5
+  picture: MyString
+  author: two
+  publisher: two
+  category: two
