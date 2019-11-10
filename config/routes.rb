@@ -10,4 +10,6 @@ Rails.application.routes.draw do
     get "signup" => "devise/users#new"
     post "signup" => "devise/users#create"
   end
+  resources :categories
 end
+

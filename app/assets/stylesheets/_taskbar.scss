@@ -1,0 +1,121 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+.main-nav {
+    position: relative;
+    z-index: 1000!important;
+}
+
+.main-nav .inner {
+    background-color: #e4e4e4;
+}
+
+
+.container {
+    width: 1030px;
+}
+
+.container {
+    width: 1170px;
+}
+
+.container {
+    width: 970px;
+}
+
+.container {
+    width: 750px;
+}
+.container, .container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.main-nav .main-menu {
+    width: 100%;
+}
+
+.navbar-nav {
+    float: left;
+    margin: 0;
+}
+.navbar-nav {
+    margin: 7.5px -15px;
+}
+.nav {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.navbar-nav>li {
+    border-right: solid 1px #ddd;
+}
+
+.navbar-nav>li {
+    float: left;
+}
+
+.nav>li, .nav>li .link {
+    display: block;
+    position: relative;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.navbar-nav>li .link {
+    padding: 0 10px;
+    line-height: 40px;
+}
+.main-menu > li .link {
+    color: #333;
+    white-space: nowrap;
+    padding: 0 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.navbar-nav>li .link {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.navbar-nav>li .link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+.nav>li .link {
+    padding: 10px 15px;
+}
+.nav>li, .nav>li .link {
+    display: block;
+    position: relative;
+}
+.link {
+    color: #288ad6;
+    cursor: pointer;
+}
+.link {
+    background-color: transparent;
+    text-decoration: none;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+} 
