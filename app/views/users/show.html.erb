@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<% if @user.avatar.attached? %>
+  <div style="width:70px; height:auto">
+    <%= link_to image_tag(@user.avatar, style:'width:100%'), @user %>
+  </div>
+  <% else %>
+    <%= gravatar_for @user, size: 50 %>
+<% end %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<%= link_to 'Edit', edit_user_registration_path %>
