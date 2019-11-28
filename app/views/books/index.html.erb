@@ -1,17 +1,17 @@
-<% provide(:title,'All city') %>
-<h1>Categories</h1>
+<% provide(:title,"Book") %>
+<h1>All Book</h1>
+
 <main class="main">
   <div class="container">
     <div class="row">
-      <div id="ct100_divCenter" class="center-side col-md-8"></div>
+      <div id="ct100_divCenter" class="center-side col-md-8">
+        <%= render "books/list_book"%>
+      </div>
       <div id="ct100_divRight" class="right-side col-md-4 cmszone">
         <div class="box darkBox genres hidden-sm hidden-xs Module Module-179">
           <div class="ModuleContent">
             <h2 class="module-title"><b> Category <b></h2>
             <ul class="nav">
-              <% @categories.each do |category| %>
-              <li> <%= link_to(category.title, category, class: "category_item") %> </li>
-              <% end %>
             </ul>
           </div>
         </div>
@@ -19,4 +19,4 @@
     </div>
   </div>
   <%= will_paginate %>
-</main>
+</main> 

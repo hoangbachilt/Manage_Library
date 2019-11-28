@@ -4,6 +4,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @categories = Category.paginate(page: params[:page])
     @category = Category.find.try(params[:id])
     @books = @category.books.paginate(page: params[:page])
   end

@@ -1,0 +1,79 @@
+<% provide(:title,"Book") %>
+<h1><%= @book.category.title %></h1>
+
+<main class="main">
+  <div class="container">
+    <div class="row">
+      <div id="ct100_divCenter" class="center-side col-md-8">
+        <article id="item-detail">
+          <h1 class="title-detail"><%= @book.name%></h1>
+          <time class="small">[Update: <%= @book.created_at %>]</time>
+          <div class="detail-info">
+            <div class="row">
+              <div class="col-xs-4 col-image">
+                <% if @book.picture.attached? %>
+                  <%= image_tag(@book.picture, style:"width:100%") %>
+                <% end %>
+              </div>
+              <div class="col-xs-8 col-info">
+                <ul class="list-info">
+                  <li class="author row">
+                    <p class="name col-xs-4">
+                      Author
+                    </p>
+                    <p class="col-xs-8">
+                      <%= link_to(@book.author.name, @book, class: "link_to_for_author_book") %>
+                    </p>
+                  </li>
+                  <li class="kind row">
+                    <p class="name col-xs-4">
+                      Category
+                    </p>
+                    <p class="col-xs-8">
+                      <%= link_to(@book.category.title, category_path(@book.category), class: "link_to_for_author_book") %>
+                    </p>
+                  </li>
+                  <li class="quanity row">
+                    <p class="name col-xs-4">
+                      Quanity
+                    </p>
+                    <p class="col-xs-8">
+                      <%= @book.quanity %>
+                    </p>
+                  </li>
+                  <li class="quanity row">
+                    <p class="name col-xs-4">
+                      Like
+                    </p>
+                    <p class="col-xs-8">
+                      <% if @book.likes.find_by(user_id: current_user.id) %>
+                        <% link_to [book_likes_path(@book.likes), method: :delete] do %>
+                          <%= image_tag("dislike.jpg", size: "16x10") %>
+                        <% end %>
+                      <% else %>
+                        <% link_to book_likes_path(@book), method: :post do %>
+                          <%= image_tag("like.jpg", size: "16x10") %>
+                          
+                        <% end %>
+                      <% end %>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="detail-content">
+            <h3 class="list-title">Content</h3>
+            <p class="shortened"><%= @book.content %></p>
+          </div>
+        </article>
+        <%= render "comment", book: @book %>
+      </div>
+      <div id="ct100_divRight" class="right-side col-md-4 cmszone">
+        <div class="box darkBox genres hidden-sm hidden-xs Module Module-179">
+          <%= render "add_to_cart" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</main> 

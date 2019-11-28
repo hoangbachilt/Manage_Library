@@ -11,5 +11,9 @@ Rails.application.routes.draw do
     post "signup" => "devise/users#create"
   end
   resources :categories
+  resources :books do 
+    resources :comments
+    resources :likes
+  end
 end
 

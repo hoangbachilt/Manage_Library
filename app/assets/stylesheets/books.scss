@@ -1,0 +1,280 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.tab-content>.active {
+    display: block;
+}
+.tab-content>.tab-pane {
+    display: none;
+}
+.fade.in {
+    opacity: 1;
+}
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.journalTools {
+    margin: 15px 0;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+div {
+    display: block;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.journalrow {
+    padding: 10px 0;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.journalrow div.author {
+    overflow: hidden;
+    float: left;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.journalrow div.author>img {
+    max-width: 40px;
+}
+
+img {
+    max-width: 100%;
+}
+.btn, .caret, .checkbox-inline, .radio-inline, img {
+    vertical-align: middle;
+}
+hr, img {
+    border: 0;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.journalrow div.journalitem {
+    margin-left: 60px;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.journalrow .journalsummary, .journalrow .jsummary {
+    padding: 5px;
+    border: 1px solid #d8d8d8;
+    position: relative;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.authorname {
+    font-weight: 700;
+    color: #03f;
+    font-size: 13px;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.journalrow abbr {
+    border-style: none;
+    font-size: 11px;
+    border: none;
+    color: #999;
+    margin: 4px 0 3px;
+    padding: 4px 0 0 5px;
+    white-space: nowrap;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+abbr[title] {
+    text-decoration: underline dotted;
+}
+
+.jsummary div, .journalsummary div {
+    display: block;
+    padding: 7px 0 0;
+    word-wrap: break-word;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.journalrow ul.jcmt {
+    padding: 0;
+    margin: 0 0 0 60px;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.journalrow ul.jcmt li {
+    list-style-type: none;
+    margin-top: 15px;
+    word-wrap: break-word;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.journalrow ul.jcmt li>img {
+    float: left;
+    max-width: 40px;
+}
+img {
+    max-width: 100%;
+}
+.btn, .caret, .checkbox-inline, .radio-inline, img {
+    vertical-align: middle;
+}
+hr, img {
+    border: 0;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.journalrow .journalsummary, .journalrow .jsummary {
+    padding: 5px;
+    border: 1px solid #d8d8d8;
+    position: relative;
+}
+
+.jsummary {
+    margin-left: 55px;
+    position: relative;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.jsummary div, .journalsummary div {
+    display: block;
+    padding: 7px 0 0;
+    word-wrap: break-word;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+div {
+    display: block;
+}

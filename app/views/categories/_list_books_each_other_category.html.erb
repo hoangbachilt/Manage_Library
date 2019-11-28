@@ -1,0 +1,30 @@
+<div class="Module Module-169">
+</div>
+
+<div class="Module Module-170">
+  <div class="ModuleContent">
+    <div class="items">
+      <div class="row">
+        <% @books.each do |book|%>
+          <div class="item">
+            <figure class="clearfix">
+              <div class="image">
+                <%= link_to(book_path, class: "link_to_item") do %>
+                  <% if book.picture.attached? %>
+                    <%= image_tag(tour.picture, class: "book_img") %>
+                  <% end %>
+                <% end %>
+              </div>
+              <figcaption>
+                <h3><%= link_to(book.name, book, class: "link_book") %></h3>
+                <div class="grid-list__rating box-bottom-sp">
+                  <span class="like-area add_wishlist">0</span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
