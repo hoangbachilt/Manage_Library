@@ -1,0 +1,23 @@
+<div class="tab-content">
+  <div class="tab-pane fade in active" id="nt_comments">
+    <div class="commentpanel">
+      <div class="journalTools">
+        <div id="comment_form" class="journalEditor">
+          <%= form_for [@book, @comment], remote: true do |f| %>
+          <%= f.label :comment %>
+          <%= f.text_area :content, placeholder: "Enter comment", class: "form-control" %>
+          <%= f.hidden_field :book_id, value: @book.id %>
+          <%= f.submit "Send", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div id="view_comment" class="journalItems">
+      <% @comments.each do |comment| %>
+
+        <%= render "comments/view_comment", comment: comment %>
+      
+      <% end %>
+    </div>
+  </div>
+</div>
