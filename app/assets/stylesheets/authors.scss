@@ -1,0 +1,63 @@
+// Place all the styles related to the authors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.darkBox .author {
+    padding: 20px;
+    border-bottom: 1px solid #DDD;
+}
+
+.darkBox .author .lead {
+    color: #000;
+    margin-bottom: 15px;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.darkBox .author .avatar {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 5px;
+}
+.author .avatar {
+    height: 50px;
+    width: 50px;
+}
+.author .avatar {
+    overflow: unset !important;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.darkBox .author .author_name {
+    color: #2C3E50;
+    font-size: 14px;
+    line-height: 22px;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.darkBox .author .description {
+    text-align: left;
+    font-size: 13px;
+    line-height: 20px;
+    max-height: 60px;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+user agent stylesheet
+div {
+    display: block;
+}
