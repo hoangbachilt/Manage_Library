@@ -46,15 +46,11 @@
                       Like
                     </p>
                     <p class="col-xs-8">
-                      <% if @book.likes.find_by(user_id: current_user.id) %>
-                        <% link_to [book_likes_path(@book.likes), method: :delete] do %>
-                          <%= image_tag("dislike.jpg", size: "16x10") %>
-                        <% end %>
+                      <% pre_like = current_user.likes.find_by(book_id: @book.id) %>
+                      <% if current_user.likes.find_by(book_id: @book.id) %>
+                        <%= link_to "Dislike", [@book, pre_like], method: :delete %>
                       <% else %>
-                        <% link_to book_likes_path(@book), method: :post do %>
-                          <%= image_tag("like.jpg", size: "16x10") %>
-                          
-                        <% end %>
+                        <%= link_to "Like", book_likes_path(@book), method: :post %>
                       <% end %>
                     </p>
                   </li>
