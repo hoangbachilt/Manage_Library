@@ -1,0 +1,26 @@
+<% provide(:title,"Book") %>
+<h1><%= @publisher.name %></h1>
+
+<main class="main">
+  <div class="container">
+    <div class="row">
+      <div id="ct100_divCenter" class="center-side col-md-8">
+        <%= render "list_book_of_publisher"%>
+      </div>
+      <div id="ct100_divRight" class="right-side col-md-4 cmszone">
+        <div class="box darkBox genres hidden-sm hidden-xs Module Module-179">
+          <div class="author">
+            <div class="lead"> About NXB </div>
+            <div class="avatar">
+              <% if @publisher.avatar.attached? %>
+                <%= image_tag(@publisher.avatar, class: "book_img") %>
+              <% end %>
+            </div>
+            <div class="author_name"><%= @publisher.name %></div>
+            <div class="desciption"><%= @publisher.intro_publisher %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main> 
