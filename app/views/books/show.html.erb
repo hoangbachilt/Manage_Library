@@ -57,6 +57,18 @@
                         <% end %>
                       <% end %>
                     </p>
+                    <p class="col-xs-8">
+                      <% if @book.follows.find_by(user_id: current_user.id) %>
+                        <% link_to [book_follows_path(@book.follows), method: :delete] do %>
+                          <%= image_tag("unfollow.jpg", size: "16x10") %>
+                        <% end %>
+                      <% else %>
+                        <% link_to book_follows_path(@book), method: :post do %>
+                          <%= image_tag("follow.jpg", size: "16x10") %>
+                          
+                        <% end %>
+                      <% end %>
+                    </p>
                   </li>
                 </ul>
               </div>
