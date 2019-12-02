@@ -1,0 +1,27 @@
+<% provide(:title, 'Create bill') %>
+<% provide(:button_text, 'Create bill') %>
+<h2>Create bill</h2>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+    <%= form_for @request_borrow do |f| %>
+    <div class="field">
+      <h4>I want to borrow book from</h4>
+    </div>
+    <div class="field">
+      <%= f.label :day_borrow %><br />
+      <%= f.date_field :day_borrow, min: Date.today, class: "form-control" %>
+    </div>
+    <div class="field">
+      <h4>to</h4>
+    </div>
+    <div class="field">
+      <%= f.label :day_return %><br />
+      <%= f.date_field :day_return, min: Date.today, class: "form-control" %>
+    </div><br>
+    <div class="field">
+      <%= f.submit "Create bill", class: "btn btn-primary" %>
+    </div>
+    <% end %>
+  </div>
+</div>
