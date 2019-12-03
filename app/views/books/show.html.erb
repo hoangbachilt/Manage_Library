@@ -61,6 +61,26 @@
                       <%= @book.likes.count %>
                         </p>
                   </li>
+                  <li class="quanity row">
+                    <p class="name col-xs-4">
+                      Like
+                    </p>
+                    <p class="col-xs-8">
+                      <% if user_signed_in? %>
+                        <% pre_follow = current_user.follow_books.find_by(book_id: @book.id) %>
+                        <% if current_user.follow_books.find_by(book_id: @book.id) %>
+                          <%= link_to "UnFollow", book_follow_book_path(@book, pre_follow), method: :delete, class: "unfollow", remote: true %>
+                        <% else %>
+                          <%= link_to "Follow", book_follow_books_path(@book), method: :post, class: "follow", remote: true %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to "Follow", signin_path, alert: "Hay dang nhap de Follow" %>
+                      <% end %>
+                    </p>
+        <p class="col-xs-8" id="like_count">
+                      <%= @book.likes.count %>
+                        </p>
+                  </li>
                 </ul>
               </div>
             </div>
