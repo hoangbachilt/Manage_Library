@@ -1,0 +1,2 @@
+$('.test-like').html("<%= j link_to 'Like', book_likes_path(@book), method: :post, class: 'like', remote: true %>");
+$('#like_count').html("<%= @book.likes.count %>")
