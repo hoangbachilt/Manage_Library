@@ -1,0 +1,2 @@
+$('.test-like').html("<%= j link_to 'Dislike', book_like_path(@book, @like), method: :delete, class: 'dislike', remote: true %>");
+$('#like_count').html("<%= @book.likes.count %>")
