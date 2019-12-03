@@ -7,4 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 category = Category.create! title: "Toan"
 
-10.times.each{|x| Category.create(  title: "Toan#{x}")} 
+10.times.each{|x| Category.create( title: "Toan#{x}")}
+
+
+
