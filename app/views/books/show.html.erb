@@ -46,17 +46,20 @@
                       Like
                     </p>
                     <p class="col-xs-8">
-                      <% if @book.likes.find_by(user_id: current_user.id) %>
-                        <% link_to [book_likes_path(@book.likes), method: :delete] do %>
-                          <%= image_tag("dislike.jpg", size: "16x10") %>
+                      <% if user_signed_in? %>
+                        <% pre_like = current_user.likes.find_by(book_id: @book.id) %>
+                        <% if current_user.likes.find_by(book_id: @book.id) %>
+                          <%= link_to "Dislike", book_like_path(@book, pre_like), method: :delete, class: "dislike", remote: true %>
+                        <% else %>
+                          <%= link_to "Like", book_likes_path(@book), method: :post, class: "like", remote: true %>
                         <% end %>
                       <% else %>
-                        <% link_to book_likes_path(@book), method: :post do %>
-                          <%= image_tag("like.jpg", size: "16x10") %>
-                          
-                        <% end %>
+                        <%= link_to "Like", signin_path, alert: "Hay dang nhap de like" %>
                       <% end %>
                     </p>
+		    <p class="col-xs-8" id="like_count">
+                      <%= @book.likes.count %>
+                        </p>
                   </li>
                 </ul>
               </div>
@@ -64,14 +67,14 @@
           </div>
           <div class="detail-content">
             <h3 class="list-title">Content</h3>
-            <p class="shortened"><%= @book.content %></p>
+            <p class="shortened"><%= @book.content.html_safe %></p>
           </div>
         </article>
         <%= render "comment", book: @book %>
       </div>
       <div id="ct100_divRight" class="right-side col-md-4 cmszone">
         <div class="box darkBox genres hidden-sm hidden-xs Module Module-179">
-          <%= render "add_to_cart" %>
+          <%= render "add_to_cart", request_detail: @request_detail %>
         </div>
       </div>
     </div>
