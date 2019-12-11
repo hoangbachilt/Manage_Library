@@ -1,0 +1,9 @@
+<% if @cart.request_details.size == 0 %>
+  <p class="text-center">
+    There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.
+  </p>
+<% else %>
+  <% @cart.request_details.each do |request_detail| %>
+    <%= render "cart_row", book: request_detail.book, request_detail: request_detail %>
+  <% end %>
+<% end %>
