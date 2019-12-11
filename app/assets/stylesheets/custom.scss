@@ -117,7 +117,7 @@ aside {
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   @include box-sizing(border-box)
 }
 
@@ -169,9 +169,14 @@ input {
 body {
   padding-top: 0px;
 }
+
+
+.navbar {
+  margin-bottom: 0 !important;
+}
+
  /* Thumbnail */
-
-
+ 
 .nav-thumbnails {
     display: block;
     padding: 0;
@@ -244,9 +249,4 @@ body {
 .tours-layout .content-wrapper > .content .group-btn-tours:hover .left-btn{border-right:1px solid #fff;}
 .tours-layout:hover{box-shadow:0px 5px 20px 0px rgba(0, 0, 0, 0.1);}
 .tours-layout:hover .image-wrapper .link img{transform:scale(1.2);-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-ms-transform:scale(1.2);-o-transform:scale(1.2);}
-.tours-layout:hover .image-wrapper .link:before{
-  top:-20%;
-  margin-bottom: 0px;
-  @include box-sizing(border-box)
-}
-
+.tours-layout:hover .image-wrapper .link:before{top:-20%;}

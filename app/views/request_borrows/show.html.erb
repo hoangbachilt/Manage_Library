@@ -1,8 +1,18 @@
 <main class="main">
   <div class="container">
     <div class="row">
-      <div class="shopping-cart">
-        <%= render "shopping_cart" %>
+      <div class="">
+        <% if !@request_borrow.status.nil? %>
+          <h4>The muon sach cua ban</h4>
+          <ul>
+            <li>Name: <%= @request_borrow.user.name %></li>
+            <li>Email: <%= @request_borrow.user.email %></li>
+            <li>Day Borrow: <%= @request_borrow.day_borrow %></li>
+            <li>Day Return: <%= @request_borrow.day_return %></li>
+          </ul>
+        <% else %>
+          <h4>The muon sach nay cua ban dang trong qua trinh cho doi admin duyet</h4> 
+        <% end %>
       </div>
     </div>
   </div>

@@ -5,14 +5,32 @@
   <div class="container">
     <div class="row">
       <div id="ct100_divCenter" class="center-side col-md-8">
-        <%= render "books/list_book"%>
+        <%= render "books/list_book", book:@books %>
       </div>
       <div id="ct100_divRight" class="right-side col-md-4 cmszone">
-        <div class="box darkBox genres hidden-sm hidden-xs Module Module-179">
+        <div class="comic-wrap Module Module-168">
           <div class="ModuleContent">
-            <h2 class="module-title"><b> Category <b></h2>
-            <ul class="nav">
-            </ul>
+            <div class="box-tab box darkBox">
+            <h2 class="module-title"><b> Truyen duoc like nhieu nhat </b></h2>
+            <div class="tab-pane">
+              <ul class="list-unstyled">
+                <% @book_ids[0...5].each do |id| %>
+                  <% @book_like_desc = Book.find(id) %>
+                  <li class="clearfix">
+                    <div class="t-item">
+                      <%= link_to(@book_like_desc, class: "thumb") do %>
+                        <% if @book_like_desc.picture.attached? %>
+                          <%= image_tag(@book_like_desc.picture, class: "lazy") %>
+                        <% end %>
+                      <% end %>
+                      <h3 class="title"><%= link_to(@book_like_desc.name, @book_like_desc) %></h3>
+                      <p class="chapter top">Like: <%= @book_like_desc.likes.count %></p>
+                    </div>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+            </div>
           </div>
         </div>
       </div>

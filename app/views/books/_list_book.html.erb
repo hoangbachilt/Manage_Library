@@ -18,7 +18,7 @@
               <figcaption>
                 <h3><%= link_to(book.name, book, class: "link_book") %></h3>
                 <div class="grid-list__rating box-bottom-sp">
-                  <span class="like-area add_wishlist">0</span>
+                  <span class="like-area add_wishlist"><%= book.likes.count %></span>
                 </div>
               </figcaption>
             </figure>

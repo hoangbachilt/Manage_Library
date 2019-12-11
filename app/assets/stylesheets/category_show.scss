@@ -1,0 +1,251 @@
+.center-side {
+    margin-bottom: 10px;
+}
+
+.col-md-8 {
+    width: 66.66666667%;
+}
+
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: left;
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.items .row {
+    margin-left: -7px;
+    margin-right: -7px;
+}
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+div {
+    display: block;
+}
+
+ 
+.items .item:nth-child(4n+1) {
+    clear: both;
+}
+ 
+.items .item {
+    width: 25%;
+    padding: 0 7px;
+}
+.items .item {
+    padding: 0;
+    margin: 0 0 10px;
+    float: left;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+body, figure {
+    margin: 0;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+figure {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+
+.items .item .image {
+    position: relative;
+    height: 200px;
+    line-height: 200px;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    box-shadow: #000 0 0 0;
+    text-align: center;
+    overflow: hidden;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.link_to_item {
+    color: #288ad6;
+    cursor: pointer;
+}
+.link_to_item {
+    background-color: transparent;
+    text-decoration: none;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+.link_to_item:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+element.style {
+    display: inline;
+}
+.items .item .image .book_img {
+    vertical-align: middle;
+    width: 100%;
+}
+.book_img {
+    max-width: 100%;
+}
+.btn, .caret, .checkbox-inline, .radio-inline, .book_img {
+    vertical-align: middle;
+}
+hr, .book_img {
+    border: 0;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.items .item figcaption {
+    padding: 5px 0 0;
+    position: relative;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+figcaption {
+    display: block;
+}
+
+.items .item figcaption h3 {
+    font-size: 16px;
+    margin: 0 0 7px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.items .item figcaption h3 .link_book {
+    color: #000;
+}
+.link_book {
+    color: #288ad6;
+    cursor: pointer;
+}
+.link_book {
+    background-color: transparent;
+    text-decoration: none;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+.link_book:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+bottom-sp {
+    padding: 10px 0px 0px 0px;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.like-area {
+    background: url(../../../../../../../../design/themes/nhanvan/media/images/icons/like.png?1573094672) no-repeat 0px 4px;
+    padding: 0px 0px 0px 20px;
+    display: inline-block;
+    font-size: 12px;
+    color: #9d9d9d;
+    cursor: pointer;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

@@ -1,0 +1,17 @@
+  <li>
+    <div class="author">
+      <% if sub_cmt.user.avatar.attached? %>
+      <div style="width:40px; height:auto">
+        <%= image_tag(sub_cmt.user.avatar, style:"max-width:40px") %>
+      </div>
+      <% else %>
+      <%= gravatar_for sub_cmt.user, size: 50 %>
+      <% end %>
+    </div>
+    <div class="jsummary">
+      <span class="authorname"><%= sub_cmt.user.name %></span>
+      <abbr><%= sub_cmt.created_at %></abbr>
+      <div class="summary"><%= sub_cmt.content %></div>
+    </div>
+  </li>
+  

@@ -1,0 +1,13 @@
+<div class="userinfo clearfix">
+  <figure>
+    <% if @user.avatar.attached? %>
+      <%= image_tag(@user.avatar, style:'width:100%', class: "avatar user-img") %>
+    <% else %>
+      <%= gravatar_for @user, size: 50, class: "avatar user-img" %>
+    <% end %>
+    <figcaption>
+      <div class="title">Tai khoan cua</div>
+      <div class="user-name"><%= @user.name %></div>
+    </figcaption>
+  </figure>
+</div>

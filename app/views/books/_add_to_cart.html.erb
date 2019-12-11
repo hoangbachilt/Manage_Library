@@ -1,0 +1,19 @@
+<%= form_for [@book, @request_detail], remote: true do |f| %>
+  <% if RequestDetail.exists?({book_id: @book.id, cart_id: @current_cart.id}) %>
+    <% @request_detail = RequestDetail.find_by(book_id: @book.id, cart_id: @current_cart) %>
+    <%= link_to "Remove", book_request_detail_path(@book.id, @request_detail.id), method: :delete, class: "btn btn-primary", remote: true %>
+  <% else %>
+    <div class="input-group">
+      <%= f.number_field :quanity, value: 1, class: "form-control", min: 1 %>
+      <div class="input-group-btn">
+        <%= f.hidden_field :book_id, value: @book.id %>
+        <%= f.submit "Add", class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+<div id="check_quanity">
+          
+</div>
+
+

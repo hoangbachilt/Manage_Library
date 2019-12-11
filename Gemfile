@@ -72,3 +72,8 @@ gem "bootstrap-will_paginate"
 gem "jquery-rails"
 
 gem "ransack"
+
+gem "rails_admin"
+
+gem "ckeditor"
+gem "mini_magick"
