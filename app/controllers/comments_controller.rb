@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
-	 before_action :user_signed?
+  before_action :user_signed?
 
   def create
-    @comment = current_user.comments.new(comment_params)
+    @comment = current_user.comments.build(comment_params)
     @book = @comment.book
     respond_to do |format|
       if @comment.save
@@ -11,6 +11,7 @@ class CommentsController < ApplicationController
         # format.json { render :show, status: :created, location: @comment }
       else
         format.html { redirect_to @comment.book, alert: @comment.errors.full_messages.first}
+        format.js
         # format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
