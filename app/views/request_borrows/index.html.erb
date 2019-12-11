@@ -1,0 +1,22 @@
+<main class="main">
+  <div class="container">
+    <div class="row">
+      <div class="">
+        <% @request_borrows.each do |request_borrow| %>
+        <div>
+          <p>Name: <%= current_user.name %></p>
+          <p>Email: <%= current_user.email %></p>
+          <p>Books: </p>
+          <ul>
+            <% request_borrow.request_details.each do |request_detail| %>
+              <li><%= image_tag(request_detail.book.picture, size: "30x30") %>: <%= request_detail.quanity %> x <%= request_detail.book.name %></li>
+            <% end %>
+            <h2><%= link_to "Show", request_borrow %></h2>
+          </ul><br><br><br>
+        </div>
+        <% end %>
+        <%= will_paginate @request_borrows %>
+      </div>
+    </div>
+  </div>
+</main>

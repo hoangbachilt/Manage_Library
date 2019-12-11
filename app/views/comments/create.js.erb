@@ -1,2 +1,7 @@
-// $('#comment_form').html("<%= j render "comments/comment_form", comment: @comment %>");
-$('#view_comment').append("<%= j render 'comments/view_comment', comment: @comment%>");
+<% if @comment.parent.nil? %>
+  $('#view_comment').prepend("<%= j render 'comments/view_comment', comment: @comment %>");
+  $('#comment_content').val('');
+<% else %>
+  $('#sub_comment').prepend("<%= j render 'comments/reply_comment', sub_cmt: @comment %>");
+  $('#comment_content').val('');
+<% end %>

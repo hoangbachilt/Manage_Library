@@ -1,21 +1,51 @@
-<p id="notice"><%= notice %></p>
-
-<% if @user.avatar.attached? %>
-  <div style="width:70px; height:auto">
-    <%= link_to image_tag(@user.avatar, style:'width:100%'), @user %>
+<div class="main">
+  <div class="container">
+    <div class="row">
+      <div id="ctl00_divCenter" class="full-width col-sm-12">
+        <div class="row">
+          <div class="col-md-3 col-sm-4">
+            <section class="user-sidebar clearfix">
+              <%= render "avatar", user: @user %>
+            </section>
+            <div class="user-sidelink clearfix">
+            </div>
+          </div>
+          <div class="col-md-9 col-sm-8">
+            <div class="user-page clearfix">
+              <h1 class="postname">Thong tin chung</h1>
+              <div class="row">
+                <div class="col-xs-12 col-md-6">
+                  <div class="account-info clearfix">
+                    <h2 class="posttitle">Thong tin tai khoan</h2>
+                    <%= link_to "Chinh sua", edit_user_registration_path, class: "link" %>
+                    <div class="info-detail">
+                      <div class="group">
+                        <div class="label">Ho va ten</div>
+                        <div class="detail"><%= @user.name %></div>
+                      </div>
+                      <div class="group">
+                        <div class="label">Email</div>
+                        <div class="detail"><%= @user.email %></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <div class="relative">
+                    <h2 class="posttitle">The muon sach</h2>
+                    <%= link_to "Xem tat ca", request_borrows_path, class: "link" %>
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <div class="relative">
+                  <h2 class="posttitle">Binh luan</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <% else %>
-    <%= gravatar_for @user, size: 50 %>
-<% end %>
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<%= link_to 'Edit', edit_user_registration_path %>
+</div>

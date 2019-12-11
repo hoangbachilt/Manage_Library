@@ -22,7 +22,7 @@
                       Author
                     </p>
                     <p class="col-xs-8">
-                      <%= link_to(@book.author.name, @book, class: "link_to_for_author_book") %>
+                      <%= link_to(@book.author.name, author_path(@book.author), class: "link_to_for_author_book") %>
                     </p>
                   </li>
                   <li class="kind row">
@@ -42,10 +42,7 @@
                     </p>
                   </li>
                   <li class="quanity row">
-                    <p class="name col-xs-4">
-                      Like
-                    </p>
-                    <p class="col-xs-8">
+                    <p class="name test-like col-xs-4">
                       <% if user_signed_in? %>
                         <% pre_like = current_user.likes.find_by(book_id: @book.id) %>
                         <% if current_user.likes.find_by(book_id: @book.id) %>
@@ -57,29 +54,9 @@
                         <%= link_to "Like", signin_path, alert: "Hay dang nhap de like" %>
                       <% end %>
                     </p>
-		    <p class="col-xs-8" id="like_count">
+                    <p class="col-xs-8" id="like_count">
                       <%= @book.likes.count %>
-                        </p>
-                  </li>
-                  <li class="quanity row">
-                    <p class="name col-xs-4">
-                      Like
                     </p>
-                    <p class="col-xs-8">
-                      <% if user_signed_in? %>
-                        <% pre_follow = current_user.follow_books.find_by(book_id: @book.id) %>
-                        <% if current_user.follow_books.find_by(book_id: @book.id) %>
-                          <%= link_to "UnFollow", book_follow_book_path(@book, pre_follow), method: :delete, class: "unfollow", remote: true %>
-                        <% else %>
-                          <%= link_to "Follow", book_follow_books_path(@book), method: :post, class: "follow", remote: true %>
-                        <% end %>
-                      <% else %>
-                        <%= link_to "Follow", signin_path, alert: "Hay dang nhap de Follow" %>
-                      <% end %>
-                    </p>
-        <p class="col-xs-8" id="like_count">
-                      <%= @book.likes.count %>
-                        </p>
                   </li>
                 </ul>
               </div>
@@ -90,11 +67,21 @@
             <p class="shortened"><%= @book.content.html_safe %></p>
           </div>
         </article>
+        <br>
         <%= render "comment", book: @book %>
       </div>
       <div id="ct100_divRight" class="right-side col-md-4 cmszone">
         <div class="box darkBox genres hidden-sm hidden-xs Module Module-179">
-          <%= render "add_to_cart", request_detail: @request_detail %>
+          <div class="ModuleContent">
+            <h2 class="module-title"><b> Them hoac xoa khoi danh sach muon <b></h2>
+            <% if @book.quanity > 0 %>
+              <ul class="nav" id="add_remove_book">
+                <%= render "add_to_cart", request_detail: @request_detail %>
+              </ul>
+            <% else %>
+              <b><h3>Hien nay sach dang het</h3></b>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

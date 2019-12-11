@@ -1,49 +1,18 @@
-<div class="journalrow">
-  <div class="author">
-    <% if comment.user.avatar.attached? %>
-    <div style="width:40px; height:auto">
-      <%= image_tag(comment.user.avatar, style:"max-width:40px") %>
-    </div>
-    <% else %>
-    <%= gravatar_for comment.user, size: 50 %>
-    <% end %>
+<div class="author">
+  <% if comment.user.avatar.attached? %>
+  <div style="width:40px; height:auto">
+    <%= image_tag(comment.user.avatar, style:"max-width:40px") %>
   </div>
-  <div class="journalitem">
-    <div class="journalsummary">
-      <span class="authorname"><%= comment.user.name %></span>
-      <abbr><%= comment.created_at %></abbr>
-      <div class="summary">
-        <%= comment.content %>
-      </div>
+  <% else %>
+  <%= gravatar_for comment.user, size: 50 %>
+  <% end %>
+</div>
+<div class="journalitem">
+  <div class="journalsummary">
+    <span class="authorname"><%= comment.user.name %></span>
+    <abbr><%= comment.created_at %></abbr>
+    <div class="summary">
+      <%= comment.content %>
     </div>
   </div>
-  <ul class="jcmt" id="jcmt-6516518">
-    <% comment.sub_comments.each do |sub_cmt| %>
-    <li>
-      <div class="author">
-        <% if comment.user.avatar.attached? %>
-        <div style="width:40px; height:auto">
-          <%= image_tag(comment.user.avatar, style:"max-width:40px") %>
-        </div>
-        <% else %>
-        <%= gravatar_for comment.user, size: 50 %>
-        <% end %>
-      </div>
-      <div class="jsummary">
-        <span class="authorname"><%= sub_cmt.user.name %></span>
-        <abbr><%= sub_cmt.created_at %></abbr>
-        <div class="summary"><%= sub_cmt.content %></div>
-      </div>
-    </li>
-    <% end %>
-    <div class="journalEditor" id="sub_comments">
-      <%= form_for [@book, @book.comments.new], remote: true do |f| %>
-      <%= f.label :Reply %>
-      <%= f.text_area :content, class: "form-control" %>
-      <%= f.hidden_field :book_id, value: @book.id %>
-      <%= f.hidden_field :parent_id, value: comment.id %>
-      <%= f.submit "Reply", class: "btn btn-primary" %>
-      <% end %>
-    </div>
-  </ul>
 </div>

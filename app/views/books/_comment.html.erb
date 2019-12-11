@@ -3,20 +3,46 @@
     <div class="commentpanel">
       <div class="journalTools">
         <div id="comment_form" class="journalEditor">
-          <%= form_for [@book, @comment], remote: true do |f| %>
-          <%= f.label :comment %>
-          <%= f.text_area :content, placeholder: "Enter comment", class: "form-control" %>
-          <%= f.hidden_field :book_id, value: @book.id %>
-          <%= f.submit "Send", class: "btn btn-primary" %>
+          <% if user_signed_in? %>
+            <%= form_for [@book, @comment], remote: true do |f| %>
+            <%= f.label :comment %>
+            <%= f.text_area :content, placeholder: "Enter comment", class: "form-control" %>
+            <%= f.hidden_field :book_id, value: @book.id %>
+            <%= f.submit "Send", class: "btn btn-primary" %>
+            <% end %>
           <% end %>
         </div>
       </div>
     </div>
-    <div id="view_comment" class="journalItems">
+    <div class="journalItems">
       <% @comments.each do |comment| %>
-
-        <%= render "comments/view_comment", comment: comment %>
-      
+      <div class="journalrow">
+        <div id="view_comment">
+          <%= render "comments/view_comment", comment: comment %>
+        </div>
+        <div>
+          <ul class="jcmt" id="jcmt-6516518 comment-<%= comment.id %>">
+            <% comment.sub_comments.each do |sub_cmt| %>
+            <div id="sub_comment">
+              <%= render "comments/reply_comment", sub_cmt: sub_cmt %>
+            </div>
+            <% end %>
+          </ul>
+          <ul>
+            <div class="journalEditor" id="sub_comments">
+              <% if user_signed_in? %>
+              <%= form_for [@book, @book.comments.new], remote: true do |f| %>
+              <%= f.label :Reply %>
+              <%= f.text_area :content, class: "form-control" %>
+              <%= f.hidden_field :book_id, value: @book.id %>
+              <%= f.hidden_field :parent_id, value: comment.id %>
+              <%= f.submit "Reply", class: "btn btn-primary" %>
+              <% end %>
+              <% end %>
+            </div>
+          </ul>
+        </div>
+      </div>
       <% end %>
     </div>
   </div>

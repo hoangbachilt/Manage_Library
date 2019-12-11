@@ -1,16 +1,7 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// Place all the styles related to the books controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-user agent stylesheet
 div {
     display: block;
 }
@@ -274,7 +265,12 @@ div {
     box-sizing: border-box;
 }
 
-user agent stylesheet
 div {
     display: block;
+}
+
+.disable-view {
+  cursor: not-allowed;
+  background-color: #eeeeee !important;
+  opacity: 1;
 }
